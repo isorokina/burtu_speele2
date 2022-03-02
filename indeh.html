@@ -22,6 +22,46 @@
         const guess=document.querySelector('.input');
         const btn=document.querySelector('.btn');
         let play=false;
+        var pieci=['kaķis','skola','ciems','bilde','lapsa','lācis','vilks', 'putns', 'glāze', 'krūze', 'torte']
+let sesi=['lakats','vāvere','rinkis','vasara','priede','kafija','ķirbis', 'durvis']
+let septini=['pilsēta','plaukts','numurs','burkāni','lineāls','ārzemes','grāmata']
+let astoni=['pulveris','aploksne','rokturis','austiņas','kabinets','tālrunis','traktors']
+let rand5=Math.floor(Math.random()*((pieci.length -1)+1))
+let arr5=str.split('')
+let rand6=Math.floor(Math.random()*((sesi.length -1)+1))
+let arr5=str.split('')
+let rand7=Math.floor(Math.random()*((septini.length -1)+1))
+let arr5=str.split('')
+let rand8=Math.floor(Math.random()*((astoni.length -1)+1))
+
+const creteNewWords=()=>{
+let ranNum=Math.floor(Math.random()*sWords.length);
+//console.log(ranNum)
+let newTempSwords=sWord[ranNum];
+return newTempSwords;
+}
+const scrambleWords=(arr)=>{
+    for (let i=arr.length-1;i>0;i--)
+    {
+        let temp=arr[i];
+        console.log.(temp);
+        let j=Math.floor(Math.random()*(i+1));
+        console.log(i);
+        console.log(j);
+    }
+
+
+btn.addEventListener('click',function(){
+    if(!play)
+    {
+        play=true;
+        btn.innerHTML="Guess";
+        guess.classList.toggle('hidden');
+        creteNewWords;
+
+    }
+
+})
         
     </script>
 </body>
